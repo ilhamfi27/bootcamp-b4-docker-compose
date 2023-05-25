@@ -27,6 +27,8 @@ services:
     restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./volumes/mariadb:/var/lib/mysql
 
   adminer:
     image: adminer
